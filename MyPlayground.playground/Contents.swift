@@ -126,10 +126,64 @@ sayHello3("swift")
 
 // 함수특성1 : 변수나 상수에 함수를 할당할 수 있음
 func myFunc(base: Int)->String{
+    return "result is \(base+1)"
+}
+myFunc(base: 5)
+let f = myFunc
+f(10)
+
+// 함수특성2 : 함수의 반환타입으로 함수를 사용할 수 있음
+func myFunc2()->String{
+    return "This is myFunc2"
+}
+func myFunc3()->()->String{
+    return myFunc2
+}
+let f2 = myFunc3()
+f2()
+
+// 함수특성3 : 함수의 매개변수로 함수를 사용할 수 있음
+func myFunc4(base:Int)->Int{
+    return base+1
+}
+func myFunc4a(base:Int)->Int{
+    return base*10
+}
+func myFunc5(base: Int, varFunc: (Int)->Int)->Int{
+    return varFunc(base)
+}
+myFunc5(base: 10, varFunc: myFunc4a)
+
+// 함수 중첩
+func outterFunc(base:Int)->(Int)->String{
+    let value = base + 20
+    func innerFunc(inc:Int)->String{
+        return "\(inc+value) 를 반환"
+    }
     
+    return innerFunc
 }
 
+let f3 = outterFunc(base: 10)
 
+f3(10)
+f3(100)
+f3(1000)
 
+// 클로져 표현식
+/*
+ func myFunc4(base:Int)->Int{
+ return base+1
+ }*/
+let f4 = { (base:Int)->Int in
+    return base+1
+}
+f4(10)
+
+({ (base:Int)->Int in
+    return base+1
+})(100)
+
+// 클로저 표현식과 경량문법
 
 
