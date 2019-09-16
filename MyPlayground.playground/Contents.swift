@@ -228,5 +228,162 @@ rect.originX = 4.0
 rect.centerY = 100.0
 
 
+// 프로퍼티 옵저버
+struct Job{
+    var income: Int = 0 {
+        willSet{
+            print("new income is \(newValue)")
+        }
+        didSet{
+            print("income increased \(income - oldValue)")
+        }
+    }
+}
+var job = Job(income: 100)
+job.income = 120
+
+// 타입 프로퍼티 / 타입 메서드
+class MyTypeClass{
+    static var value:Int = 10
+    class var value2:Int{
+        return 100
+    }
+    
+    func sayHello(){
+        print("hello world")
+    }
+    class func sayHelloTypeFunc(){
+        print("hello type function")
+    }
+}
+MyTypeClass.value
+MyTypeClass.sayHelloTypeFunc()
+
+// 상속
+class Vehicle{
+    var currentSpeed = 0.0
+    var description:String {
+        return "move \(currentSpeed)"
+    }
+}
+class Bicycle: Vehicle{
+    var hasBasket = false
+}
+let bicycle = Bicycle()
+bicycle.hasBasket = true
+bicycle.currentSpeed = 20.0
+print("bicycle: \(bicycle.description)")
+
+// 프로퍼티 재정의(override)
+class Car: Vehicle{
+    var gear = 0
+    var engineLevel = 0
+    override var currentSpeed: Double{
+        get{
+            return Double(engineLevel*50)
+        }
+        set{ }
+    }
+}
+let car = Car()
+car.currentSpeed = 100.0
+print(car.currentSpeed)
+
+// 타입 비교/캐스팅
+let vehicle: Vehicle
+// vehicle = (Vehicle) bicycle <- java
+vehicle = bicycle as Vehicle
+
+let car1 = vehicle as? Bicycle
+
+// 클래스 초기화
+class Resolution{
+    var width: Int
+    var height = 0 //: Int
+    var depth = 0
+    init(width: Int) {
+        self.width = width
+    }
+//    init(width: Int, height: Int){
+//
+//    }
+}
+let res = Resolution(width: 100)
+class Resolution2: Resolution{
+    override init(width: Int){
+        super.init(width: width)
+    }
+}
+
+// 옵셔널 체인
+struct Human{
+    var name: String?
+    var isMan: Bool
+}
+struct Company{
+    var ceo: Human?
+    var companyName: String?
+}
+var boy:Human? = Human(name: "john", isMan: true)
+var myCompany: Company? = Company(ceo: boy, companyName: "myCompany")
+
+
+if myCompany != nil {
+    if myCompany!.ceo != nil {
+        if myCompany!.ceo!.name != nil {
+            print("hello \(myCompany!.ceo!.name!)")
+        }
+    }
+}
+
+if let company = myCompany {
+    if let ceo = company.ceo {
+        if let name = ceo.name {
+            print("hello \(name)")
+        }
+    }
+}
+
+if let name = myCompany?.ceo?.name {
+    print("hello \(name)")
+}
+print(myCompany?.ceo?.isMan) // Optional(true)
+
+
+// 열거형 ( enum )
+enum Direction{
+    case North
+    case South
+    case East, West
+}
+var dir = Direction.North
+dir = .East
+
+enum HTTPCode: Int{
+    case OK = 200
+    case NOT_MODIFY = 304
+    case NOT_FOUND = 404
+    case SERVER_ERROR = 500
+    
+    var value: String{
+        return "HTTP number is \(rawValue)"
+    }
+    func getDescription()->String{
+        switch self {
+        case .OK:
+            return "success HTTPCode is \(rawValue)"
+        default:
+            return "not match"
+        }
+    }
+}
+print(HTTPCode.OK.rawValue)
+print(HTTPCode.OK.getDescription())
+
+
+
+
+
+
 
 
