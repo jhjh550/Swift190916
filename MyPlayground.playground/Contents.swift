@@ -185,5 +185,48 @@ f4(10)
 })(100)
 
 // 클로저 표현식과 경량문법
+var valueArray = [1,9,5,7,2,3]
+
+valueArray.sort { (s1:Int, s2:Int) -> Bool in
+    if s1>s2 {
+        return true
+    }else{
+        return false
+    }
+}
+valueArray
+
+valueArray.sort { $0 > $1 }
+
+
+// struct
+struct MyStruct{
+    var myVal = 10
+}
+struct MyRect{
+    var originX: Double
+    var originY = 0.0
+    var sizeX = 0.0
+    var sizeY = 0.0
+    var centerX: Double{
+        return originX + (sizeX / 2)
+    }
+    var centerY: Double{
+        get{
+            return originY + (sizeY / 2)
+        }
+        set(newValue){
+            originY = newValue - ( sizeY / 2)
+        }
+    }
+    
+}
+
+var rect = MyRect(originX: 0.0, originY: 0.0, sizeX: 10.0, sizeY: 10.0)
+rect.centerX
+rect.originX = 4.0
+rect.centerY = 100.0
+
+
 
 
