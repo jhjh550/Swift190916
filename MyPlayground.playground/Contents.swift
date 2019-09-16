@@ -380,10 +380,73 @@ enum HTTPCode: Int{
 print(HTTPCode.OK.rawValue)
 print(HTTPCode.OK.getDescription())
 
+// 확장 구문 ( extension )
+extension Double{
+    var km: Double{ return self*1000 }
+    var m: Double{ return self }
+    var cm: Double{ return self/100 }
+    var mm: Double{ return self/1000 }
+    var desc: String {
+        return "\(self)km is \(self.km)m"
+    }
+}
+
+5.5.km
+125.1.mm
+print(10.1.desc) // 10.1km is 10100.0m
+
+extension Int{
+    func repeatation(task: ()->Void){
+        for _ in 1...self {
+            task()
+        }
+    }
+    
+    mutating func square(){
+        self = self * self
+    }
+}
+
+var value1 = 4
+value1.square()
+
+3.repeatation {
+    print("hello")
+}
+
+10.repeatation {
+    print("hello swift")
+}
 
 
+class MyParent{
+    init(){
+        
+    }
+}
+// 프로토콜
+protocol MyProtocol{
+    var name: String{ get set }
+    var description: String { get }
+    init()
+    init(param: String)
+}
 
+class MyImplement: MyParent, MyProtocol{
+    var name = "john"
+    var description: String{
+        return "name is \(name)"
+    }
+    required override init(){
+        
+    }
+    required init(param: String){
+        
+    }
+}
 
+let implement = MyImplement()
+implement.name = "hello kotlin"
 
 
 
