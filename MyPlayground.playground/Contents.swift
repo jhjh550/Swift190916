@@ -82,6 +82,53 @@ for (_, value) in capital2{
     print(value)
 }
 
+// Optional
+var myVal: Int?
+myVal = 3
+if myVal != nil {
+    myVal = myVal! + 5
+}
+// optional binding
+if var myVal2 = myVal {
+    print(myVal2)
+}
+print(myVal)
+
+
+let optInt = Int("1234")
+if optInt != nil {
+    if optInt == 123 {
+        print("value is 123")
+    }else{
+        print("value is not 123")
+    }
+}
+
+// 함수
+func sayHello(name: String)->Int{
+    print("hello \(name)")
+    return 0
+}
+sayHello(name: "swift")
+
+// 외부 매개변수
+func sayHello2(studentName name: String){
+    print("hello \(name)")
+}
+sayHello2(studentName: "swift")
+
+func sayHello3(_ name:String){
+    print("hello \(name)")
+}
+
+sayHello3("swift")
+
+
+// 함수특성1 : 변수나 상수에 함수를 할당할 수 있음
+func myFunc(base: Int)->String{
+    
+}
+
 
 
 
