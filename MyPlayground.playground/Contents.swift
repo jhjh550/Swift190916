@@ -549,3 +549,31 @@ let tracker = DiceGameTracker()
 game.delegate = tracker
 game.play()
 
+// 오류처리
+// YYYY-MM-DD
+enum DateParingError: Error{
+    case OverSizeString
+    case UnderSizeString
+}
+func parsingDate(param:String) throws ->Int{
+    guard param.count == 10 else{
+        if param.count < 10 {
+            throw DateParingError.UnderSizeString
+        }else{
+            throw DateParingError.OverSizeString
+        }
+    }
+    return 0
+}
+
+do{
+    try parsingDate(param: "999-11-11")
+}catch {
+    print(error)
+//    print(error.localizedDescription)
+}
+
+
+
+
+
