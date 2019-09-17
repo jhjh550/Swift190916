@@ -545,5 +545,7 @@ class SnakeLadderGame: DiceGame{
 }
 
 let game = SnakeLadderGame()
+let tracker = DiceGameTracker()
+game.delegate = tracker
 game.play()
 
