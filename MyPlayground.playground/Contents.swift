@@ -449,4 +449,43 @@ let implement = MyImplement()
 implement.name = "hello kotlin"
 
 
+// 함수 예제
+func plus(a:Int, b:Int)->Int{
+    return a+b
+}
+func minus(a:Int, b:Int)->Int{
+    return a-b
+}
+func times(a:Int, b:Int)->Int{
+    return a*b
+}
+func divide(a:Int, b:Int)->Int{
+    guard b != 0 else {
+        return 0
+    }
+    return a/b
+}
+func calc(_ operand:String)->(Int,Int)->Int{
+    switch operand {
+    case "+":
+        return plus
+    case "-":
+        return minus
+    case "*":
+        return times
+    case "/":
+        return divide
+    default:
+        return plus
+    }
+}
+
+let c1 = calc("+")
+c1(5,7)
+let c2 = calc("-")
+c2(10,2)
+let c3 = calc("/")
+c3(10,0)
+
+
 
