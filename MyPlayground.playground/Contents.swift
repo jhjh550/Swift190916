@@ -568,9 +568,11 @@ func parsingDate(param:String) throws ->Int{
 
 do{
     try parsingDate(param: "999-11-11")
-}catch {
-    print(error)
+}catch DateParingError.UnderSizeString{
+    print("under size string error")
 //    print(error.localizedDescription)
+}catch DateParingError.OverSizeString{
+    print("over size string error")
 }
 
 
