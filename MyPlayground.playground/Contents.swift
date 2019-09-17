@@ -508,6 +508,22 @@ protocol DiceGameDelegate {
     func gameDidEnd(_ game:DiceGame)
     func game(_ game:DiceGame, didStartNewTurnWithDiceRoll diceRoll:Int)
 }
+class DiceGameTracker: DiceGameDelegate{
+    func gameDidStart(_ game: DiceGame) {
+        print("The game is using \(game.dice.sides) sided dice.")
+    }
+    
+    func gameDidEnd(_ game: DiceGame) {
+        print("The game lasted for \(numberOfTurns)")
+    }
+    
+    func game(_ game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int) {
+        numberOfTurns += 1
+        print("Rolled a \(diceRoll)")
+    }
+    
+    var numberOfTurns = 0
+}
 
 class SnakeLadderGame: DiceGame{
     let finalSquare = 25
