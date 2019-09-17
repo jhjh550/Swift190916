@@ -16,6 +16,8 @@
 		4E4D37D82330AD7600B767F6 /* T01_ViewTransition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D37D72330AD7600B767F6 /* T01_ViewTransition.storyboard */; };
 		4E4D37DA2330AF9700B767F6 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D37D92330AF9700B767F6 /* FirstVC.swift */; };
 		4E4D37DC2330B6E100B767F6 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D37DB2330B6E100B767F6 /* SecondVC.swift */; };
+		4E4D37DF2330C95E00B767F6 /* T02_AlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D37DE2330C95E00B767F6 /* T02_AlertViewController.storyboard */; };
+		4E4D37E12330C9F300B767F6 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D37E02330C9F300B767F6 /* AlertVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		4E4D37D72330AD7600B767F6 /* T01_ViewTransition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = T01_ViewTransition.storyboard; sourceTree = "<group>"; };
 		4E4D37D92330AF9700B767F6 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		4E4D37DB2330B6E100B767F6 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		4E4D37DE2330C95E00B767F6 /* T02_AlertViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = T02_AlertViewController.storyboard; sourceTree = "<group>"; };
+		4E4D37E02330C9F300B767F6 /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		4E4D37C023309B1A00B767F6 /* IosSwift190917 */ = {
 			isa = PBXGroup;
 			children = (
+				4E4D37DD2330C91D00B767F6 /* T02_AlertViewController */,
 				4E4D37D62330ACC000B767F6 /* T01_ViewTransition */,
 				4E4D37C123309B1A00B767F6 /* AppDelegate.swift */,
 				4E4D37C323309B1A00B767F6 /* ViewController.swift */,
@@ -82,6 +87,15 @@
 				4E4D37DB2330B6E100B767F6 /* SecondVC.swift */,
 			);
 			path = T01_ViewTransition;
+			sourceTree = "<group>";
+		};
+		4E4D37DD2330C91D00B767F6 /* T02_AlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4E4D37DE2330C95E00B767F6 /* T02_AlertViewController.storyboard */,
+				4E4D37E02330C9F300B767F6 /* AlertVC.swift */,
+			);
+			path = T02_AlertViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +160,7 @@
 				4E4D37CC23309B1C00B767F6 /* Assets.xcassets in Resources */,
 				4E4D37D82330AD7600B767F6 /* T01_ViewTransition.storyboard in Resources */,
 				4E4D37C723309B1A00B767F6 /* Main.storyboard in Resources */,
+				4E4D37DF2330C95E00B767F6 /* T02_AlertViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +174,7 @@
 				4E4D37C423309B1A00B767F6 /* ViewController.swift in Sources */,
 				4E4D37DC2330B6E100B767F6 /* SecondVC.swift in Sources */,
 				4E4D37DA2330AF9700B767F6 /* FirstVC.swift in Sources */,
+				4E4D37E12330C9F300B767F6 /* AlertVC.swift in Sources */,
 				4E4D37C223309B1A00B767F6 /* AppDelegate.swift in Sources */,
 				4E4D37CA23309B1A00B767F6 /* IosSwift190917.xcdatamodeld in Sources */,
 			);
