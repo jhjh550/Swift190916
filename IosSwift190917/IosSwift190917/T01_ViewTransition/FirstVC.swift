@@ -18,10 +18,17 @@ class FirstVC: UIViewController {
     
 
     @IBAction func buttonClicked(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SecondVC")
-        if vc != nil {
-            present(vc!, animated: true, completion: nil)
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "SecondVC"){
+            
+            vc.modalTransitionStyle = .flipHorizontal
+            present(vc, animated: true, completion: nil)
         }
     }
     
+    @IBAction func moveNextForPush(_ sender: Any) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "SecondVC"){
+            
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }

@@ -15,6 +15,7 @@
 		4E4D37CF23309B1C00B767F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D37CD23309B1C00B767F6 /* LaunchScreen.storyboard */; };
 		4E4D37D82330AD7600B767F6 /* T01_ViewTransition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D37D72330AD7600B767F6 /* T01_ViewTransition.storyboard */; };
 		4E4D37DA2330AF9700B767F6 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D37D92330AF9700B767F6 /* FirstVC.swift */; };
+		4E4D37DC2330B6E100B767F6 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D37DB2330B6E100B767F6 /* SecondVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4E4D37D023309B1C00B767F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E4D37D72330AD7600B767F6 /* T01_ViewTransition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = T01_ViewTransition.storyboard; sourceTree = "<group>"; };
 		4E4D37D92330AF9700B767F6 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		4E4D37DB2330B6E100B767F6 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				4E4D37D72330AD7600B767F6 /* T01_ViewTransition.storyboard */,
 				4E4D37D92330AF9700B767F6 /* FirstVC.swift */,
+				4E4D37DB2330B6E100B767F6 /* SecondVC.swift */,
 			);
 			path = T01_ViewTransition;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E4D37C423309B1A00B767F6 /* ViewController.swift in Sources */,
+				4E4D37DC2330B6E100B767F6 /* SecondVC.swift in Sources */,
 				4E4D37DA2330AF9700B767F6 /* FirstVC.swift in Sources */,
 				4E4D37C223309B1A00B767F6 /* AppDelegate.swift in Sources */,
 				4E4D37CA23309B1A00B767F6 /* IosSwift190917.xcdatamodeld in Sources */,
