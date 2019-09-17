@@ -487,5 +487,47 @@ c2(10,2)
 let c3 = calc("/")
 c3(10,0)
 
+// https://docs.swift.org
 
+// Delegate
+class Dice{
+    let sides: Int
+    init(sides: Int) {
+        self.sides = sides
+    }
+    func roll()->Int{
+        return Int(arc4random()) % sides + 1
+    }
+}
+protocol DiceGame {
+    var dice: Dice{ get }
+    func play()
+}
+protocol DiceGameDelegate {
+    func gameDidStart(_ game:DiceGame)
+    func gameDidEnd(_ game:DiceGame)
+    func game(_ game:DiceGame, didStartNewTurnWithDiceRoll diceRoll:Int)
+}
+
+class SnakeLadderGame: DiceGame{
+    let finalSquare = 25
+    var square = 0
+    var dice: Dice = Dice(sides: 6)
+    var delegate: DiceGameDelegate?
+    
+    func play() {
+        square = 0
+        delegate?.gameDidStart(self)
+        
+        while square < finalSquare {
+            let diceRoll = dice.roll()
+            delegate?.game(self, didStartNewTurnWithDiceRoll: diceRoll)
+            square += diceRoll
+        }
+        delegate?.gameDidEnd(self)
+    }
+}
+
+let game = SnakeLadderGame()
+game.play()
 
