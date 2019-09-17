@@ -34,11 +34,40 @@
                                     <action selector="moveNextForPush:" destination="JDV-kQ-JmK" eventType="touchUpInside" id="hZL-gT-oWP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDu-0e-NIp">
+                                <rect key="frame" x="166" y="452" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Action Segue"/>
+                                <connections>
+                                    <segue destination="kAc-7t-kNA" kind="show" id="SjK-CF-fu4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BL-GS-8jD">
+                                <rect key="frame" x="159" y="522" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Manual Segue"/>
+                                <connections>
+                                    <action selector="moveManualSegue:" destination="JDV-kQ-JmK" eventType="touchUpInside" id="swS-Eq-xsr"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Chw-TK-oPJ">
+                                <rect key="frame" x="89" y="212" width="215" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vBK-Ba-ivv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Hello World" id="wov-CI-JzN"/>
+                    <navigationItem key="navigationItem" title="Hello World" id="wov-CI-JzN">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ndu-Kt-SaQ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textFieldEmail" destination="Chw-TK-oPJ" id="jgE-jz-YF7"/>
+                        <segue destination="kAc-7t-kNA" kind="presentation" identifier="MySegue" id="272-xX-ITK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6X-d6-gCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,14 +97,24 @@
                                     <action selector="movePrev:" destination="kAc-7t-kNA" eventType="touchUpInside" id="85a-7n-q9a"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAb-4A-l5s">
+                                <rect key="frame" x="170" y="220" width="166" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="F8b-Bj-jYN"/>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="tAb-4A-l5s" id="oAQ-1c-mdZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXW-lq-D54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936" y="90"/>
+            <point key="canvasLocation" x="1934.7826086956522" y="89.732142857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="maS-xb-Oyi">
@@ -96,4 +135,7 @@
             <point key="canvasLocation" x="98.550724637681171" y="90.401785714285708"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="272-xX-ITK"/>
+    </inferredMetricsTieBreakers>
 </document>

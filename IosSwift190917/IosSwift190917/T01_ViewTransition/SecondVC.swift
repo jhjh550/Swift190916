@@ -10,10 +10,13 @@ import UIKit
 
 class SecondVC: UIViewController {
 
+    var email:String = ""
+    @IBOutlet weak var emailLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        emailLabel.text = email
     }
     
 
