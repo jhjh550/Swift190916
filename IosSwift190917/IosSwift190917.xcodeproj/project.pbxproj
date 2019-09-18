@@ -12,6 +12,9 @@
 		4E0E98AD2331ECD00059838A /* XmlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E98AC2331ECD00059838A /* XmlVC.swift */; };
 		4E0E98B02331FB910059838A /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0E98AF2331FB910059838A /* Weather.storyboard */; };
 		4E0E98B2233201250059838A /* WeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E98B1233201250059838A /* WeatherTableViewController.swift */; };
+		4E0E98B423320E140059838A /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E98B323320E140059838A /* WeatherTableViewCell.swift */; };
+		4E0E98B62332114C0059838A /* WeatherDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E98B52332114C0059838A /* WeatherDetailVC.swift */; };
+		4E0E98B8233212500059838A /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E98B7233212500059838A /* Weather.swift */; };
 		4E4D37C223309B1A00B767F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D37C123309B1A00B767F6 /* AppDelegate.swift */; };
 		4E4D37C423309B1A00B767F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D37C323309B1A00B767F6 /* ViewController.swift */; };
 		4E4D37C723309B1A00B767F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D37C523309B1A00B767F6 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 		4E0E98AC2331ECD00059838A /* XmlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmlVC.swift; sourceTree = "<group>"; };
 		4E0E98AF2331FB910059838A /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
 		4E0E98B1233201250059838A /* WeatherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewController.swift; sourceTree = "<group>"; };
+		4E0E98B323320E140059838A /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		4E0E98B52332114C0059838A /* WeatherDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailVC.swift; sourceTree = "<group>"; };
+		4E0E98B7233212500059838A /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		4E4D37BE23309B1A00B767F6 /* IosSwift190917.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosSwift190917.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4D37C123309B1A00B767F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E4D37C323309B1A00B767F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +85,9 @@
 			children = (
 				4E0E98AF2331FB910059838A /* Weather.storyboard */,
 				4E0E98B1233201250059838A /* WeatherTableViewController.swift */,
+				4E0E98B323320E140059838A /* WeatherTableViewCell.swift */,
+				4E0E98B52332114C0059838A /* WeatherDetailVC.swift */,
+				4E0E98B7233212500059838A /* Weather.swift */,
 			);
 			path = P01_Weather;
 			sourceTree = "<group>";
@@ -234,13 +243,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0E98B423320E140059838A /* WeatherTableViewCell.swift in Sources */,
 				4E4D37C423309B1A00B767F6 /* ViewController.swift in Sources */,
 				4E4D37DC2330B6E100B767F6 /* SecondVC.swift in Sources */,
 				4E4D37DA2330AF9700B767F6 /* FirstVC.swift in Sources */,
 				4E0E98A82331D5FE0059838A /* TableViewCell.swift in Sources */,
 				4E4D37ED2331C6A200B767F6 /* TableViewController.swift in Sources */,
+				4E0E98B8233212500059838A /* Weather.swift in Sources */,
 				4E4D37E12330C9F300B767F6 /* AlertVC.swift in Sources */,
 				4E0E98B2233201250059838A /* WeatherTableViewController.swift in Sources */,
+				4E0E98B62332114C0059838A /* WeatherDetailVC.swift in Sources */,
 				4E0E98AD2331ECD00059838A /* XmlVC.swift in Sources */,
 				4E4D37C223309B1A00B767F6 /* AppDelegate.swift in Sources */,
 				4E4D37E62330D3C800B767F6 /* ImagePickVC.swift in Sources */,
