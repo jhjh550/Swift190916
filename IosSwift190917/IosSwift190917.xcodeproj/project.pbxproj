@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0E98A82331D5FE0059838A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E98A72331D5FE0059838A /* TableViewCell.swift */; };
+		4E0E98AB2331EC550059838A /* T05_XML.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0E98AA2331EC550059838A /* T05_XML.storyboard */; };
+		4E0E98AD2331ECD00059838A /* XmlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E98AC2331ECD00059838A /* XmlVC.swift */; };
 		4E4D37C223309B1A00B767F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D37C123309B1A00B767F6 /* AppDelegate.swift */; };
 		4E4D37C423309B1A00B767F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D37C323309B1A00B767F6 /* ViewController.swift */; };
 		4E4D37C723309B1A00B767F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D37C523309B1A00B767F6 /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E0E98A72331D5FE0059838A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		4E0E98AA2331EC550059838A /* T05_XML.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = T05_XML.storyboard; sourceTree = "<group>"; };
+		4E0E98AC2331ECD00059838A /* XmlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmlVC.swift; sourceTree = "<group>"; };
 		4E4D37BE23309B1A00B767F6 /* IosSwift190917.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosSwift190917.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4D37C123309B1A00B767F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E4D37C323309B1A00B767F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E0E98A92331EC2C0059838A /* T05_XML */ = {
+			isa = PBXGroup;
+			children = (
+				4E0E98AA2331EC550059838A /* T05_XML.storyboard */,
+				4E0E98AC2331ECD00059838A /* XmlVC.swift */,
+			);
+			path = T05_XML;
+			sourceTree = "<group>";
+		};
 		4E4D37B523309B1A00B767F6 = {
 			isa = PBXGroup;
 			children = (
@@ -74,7 +89,8 @@
 		4E4D37C023309B1A00B767F6 /* IosSwift190917 */ = {
 			isa = PBXGroup;
 			children = (
-				4E4D37E92331C39B00B767F6 /* New Group */,
+				4E0E98A92331EC2C0059838A /* T05_XML */,
+				4E4D37E92331C39B00B767F6 /* T04_TablewView */,
 				4E4D37E22330D2F500B767F6 /* T03_ImagePickerController */,
 				4E4D37DD2330C91D00B767F6 /* T02_AlertViewController */,
 				4E4D37D62330ACC000B767F6 /* T01_ViewTransition */,
@@ -117,13 +133,14 @@
 			path = T03_ImagePickerController;
 			sourceTree = "<group>";
 		};
-		4E4D37E92331C39B00B767F6 /* New Group */ = {
+		4E4D37E92331C39B00B767F6 /* T04_TablewView */ = {
 			isa = PBXGroup;
 			children = (
 				4E4D37EA2331C3F300B767F6 /* TableView.storyboard */,
 				4E4D37EC2331C6A200B767F6 /* TableViewController.swift */,
+				4E0E98A72331D5FE0059838A /* TableViewCell.swift */,
 			);
-			path = "New Group";
+			path = T04_TablewView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +203,7 @@
 			files = (
 				4E4D37CF23309B1C00B767F6 /* LaunchScreen.storyboard in Resources */,
 				4E4D37E42330D34300B767F6 /* T03_ImagePickerViewController.storyboard in Resources */,
+				4E0E98AB2331EC550059838A /* T05_XML.storyboard in Resources */,
 				4E4D37CC23309B1C00B767F6 /* Assets.xcassets in Resources */,
 				4E4D37D82330AD7600B767F6 /* T01_ViewTransition.storyboard in Resources */,
 				4E4D37C723309B1A00B767F6 /* Main.storyboard in Resources */,
@@ -204,8 +222,10 @@
 				4E4D37C423309B1A00B767F6 /* ViewController.swift in Sources */,
 				4E4D37DC2330B6E100B767F6 /* SecondVC.swift in Sources */,
 				4E4D37DA2330AF9700B767F6 /* FirstVC.swift in Sources */,
+				4E0E98A82331D5FE0059838A /* TableViewCell.swift in Sources */,
 				4E4D37ED2331C6A200B767F6 /* TableViewController.swift in Sources */,
 				4E4D37E12330C9F300B767F6 /* AlertVC.swift in Sources */,
+				4E0E98AD2331ECD00059838A /* XmlVC.swift in Sources */,
 				4E4D37C223309B1A00B767F6 /* AppDelegate.swift in Sources */,
 				4E4D37E62330D3C800B767F6 /* ImagePickVC.swift in Sources */,
 				4E4D37CA23309B1A00B767F6 /* IosSwift190917.xcdatamodeld in Sources */,

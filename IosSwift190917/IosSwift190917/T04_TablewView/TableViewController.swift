@@ -39,15 +39,29 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! TableViewCell
 
         // Configure the cell...
         let data = dataList[indexPath.row]
-        cell.textLabel?.text = data.title
+        cell.titleLabel.text = data.title
+        cell.descLabel.text = data.desc
+        cell.pointLabel.text = "\(data.point)"
+        
+        
+//        cell.textLabel?.text = data.title
+//        cell.detailTextLabel?.text = data.desc
+        
+//        let titleLabel = cell.viewWithTag(100) as? UILabel
+//        let descLabel = cell.viewWithTag(101) as? UILabel
+//        let pointLabel = cell.viewWithTag(102) as? UILabel
+        
 
         return cell
     }
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print( dataList[indexPath.row] )
+    }
     
 }
