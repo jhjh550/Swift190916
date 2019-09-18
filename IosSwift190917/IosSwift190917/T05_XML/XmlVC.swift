@@ -1,30 +1,3 @@
-// 날씨 주소 xml 파싱 -> hour, day, temp, wfKor
-// http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1153052000
-
-// tableViewController ( custom cell - label 4개 )
-
-// item 클릭했을 때 새로운 view 에서 보여주기
-// navigationController pushViewController
-// -> ViewController ( label 4개 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //
 //  XmlVC.swift
 //  IosSwift190917
