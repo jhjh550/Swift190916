@@ -10,8 +10,9 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapVC: UIViewController, CLLocationManagerDelegate {
+class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
+    @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -22,8 +23,16 @@ class MapVC: UIViewController, CLLocationManagerDelegate {
         locationManager.allowsBackgroundLocationUpdates = true
 
         locationManager.delegate = self
+        
+        mapView.showsUserLocation = true
+        mapView.delegate = self
 //        geoCoding()
     }
+    
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        mapView.centerCoordinate = userLocation.coordinate
+    }
+    
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse{
@@ -33,8 +42,14 @@ class MapVC: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        print(locations[0])
+        mapView.centerCoordinate = locations[0].coordinate
+//        print(locations[0])
         
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        
+        print(error.localizedDescription)
     }
     
     func geoCoding(){
@@ -61,5 +76,10 @@ class MapVC: UIViewController, CLLocationManagerDelegate {
     }
     
 
-
+    @IBAction func zoomIn(_ sender: Any) {
+        let region = MKCoordinateRegion(center: mapView.centerCoordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
+        
+        mapView.setRegion(region, animated: true)
+    }
+    
 }
