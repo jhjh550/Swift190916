@@ -36,6 +36,8 @@
 		4EF8311723330C5A00220EF5 /* T07_AutoLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF8311623330C5A00220EF5 /* T07_AutoLayout.storyboard */; };
 		4EF8311A2333222D00220EF5 /* T08_CoreData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF831192333222D00220EF5 /* T08_CoreData.storyboard */; };
 		4EF8311C2333244A00220EF5 /* CoreDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8311B2333244A00220EF5 /* CoreDataVC.swift */; };
+		4EF8311F2333452400220EF5 /* T09_Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF8311E2333452400220EF5 /* T09_Map.storyboard */; };
+		4EF831212333456B00220EF5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF831202333456B00220EF5 /* MapVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		4EF8311623330C5A00220EF5 /* T07_AutoLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = T07_AutoLayout.storyboard; sourceTree = "<group>"; };
 		4EF831192333222D00220EF5 /* T08_CoreData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = T08_CoreData.storyboard; sourceTree = "<group>"; };
 		4EF8311B2333244A00220EF5 /* CoreDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataVC.swift; sourceTree = "<group>"; };
+		4EF8311E2333452400220EF5 /* T09_Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = T09_Map.storyboard; sourceTree = "<group>"; };
+		4EF831202333456B00220EF5 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		6697C4116D4114818CDF7E10 /* Pods_IosSwift190917.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosSwift190917.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11B6E17FDBE1DB4F26716D9 /* Pods-IosSwift190917.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosSwift190917.debug.xcconfig"; path = "Target Support Files/Pods-IosSwift190917/Pods-IosSwift190917.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +149,7 @@
 		4E4D37C023309B1A00B767F6 /* IosSwift190917 */ = {
 			isa = PBXGroup;
 			children = (
+				4EF8311D2333451300220EF5 /* T09_Map */,
 				4EF831182333221100220EF5 /* T08_CoreData */,
 				4E0E98BE23330C270059838A /* T07_AutoLayout */,
 				4E0E98B9233219B00059838A /* T06_JSON */,
@@ -210,6 +215,15 @@
 				4EF8311B2333244A00220EF5 /* CoreDataVC.swift */,
 			);
 			path = T08_CoreData;
+			sourceTree = "<group>";
+		};
+		4EF8311D2333451300220EF5 /* T09_Map */ = {
+			isa = PBXGroup;
+			children = (
+				4EF8311E2333452400220EF5 /* T09_Map.storyboard */,
+				4EF831202333456B00220EF5 /* MapVC.swift */,
+			);
+			path = T09_Map;
 			sourceTree = "<group>";
 		};
 		D846E6245A5B5E0E73CA9493 /* Pods */ = {
@@ -289,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF8311F2333452400220EF5 /* T09_Map.storyboard in Resources */,
 				4EF8311A2333222D00220EF5 /* T08_CoreData.storyboard in Resources */,
 				4E4D37CF23309B1C00B767F6 /* LaunchScreen.storyboard in Resources */,
 				4E0E98B02331FB910059838A /* Weather.storyboard in Resources */,
@@ -363,6 +378,7 @@
 				4EF8311C2333244A00220EF5 /* CoreDataVC.swift in Sources */,
 				4E4D37E12330C9F300B767F6 /* AlertVC.swift in Sources */,
 				4E0E98B2233201250059838A /* WeatherTableViewController.swift in Sources */,
+				4EF831212333456B00220EF5 /* MapVC.swift in Sources */,
 				4E0E98B62332114C0059838A /* WeatherDetailVC.swift in Sources */,
 				4E0E98AD2331ECD00059838A /* XmlVC.swift in Sources */,
 				4E4D37C223309B1A00B767F6 /* AppDelegate.swift in Sources */,
