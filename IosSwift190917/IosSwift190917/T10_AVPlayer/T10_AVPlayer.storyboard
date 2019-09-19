@@ -34,14 +34,24 @@
                                     <action selector="stopClicked:" destination="GNK-L5-TyM" eventType="touchUpInside" id="a6f-FH-A5T"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="i21-a3-53Z">
+                                <rect key="frame" x="43" y="118" width="335" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="GNK-L5-TyM" eventType="valueChanged" id="2CN-eB-TAd"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ncf-mg-QFc"/>
                     </view>
+                    <connections>
+                        <outlet property="playerSlider" destination="i21-a3-53Z" id="3xG-fw-ocj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5E-6I-6Pf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26" y="80"/>
+            <point key="canvasLocation" x="24.637681159420293" y="79.6875"/>
         </scene>
     </scenes>
 </document>
