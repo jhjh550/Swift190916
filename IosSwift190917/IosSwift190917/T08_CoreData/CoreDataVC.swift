@@ -44,8 +44,38 @@ class CoreDataVC: UIViewController {
         
     }
     
+    func getObject()->Contacts?{
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Contacts", in: context)
+        
+        let request:NSFetchRequest<Contacts> = Contacts.fetchRequest()
+        request.entity = entity
+        request.predicate = NSPredicate(format: "(name = %@)", nameTextField.text!)
+        
+        do {
+            let results = try context.fetch(request)
+            statusLabel.text = "\(results.count) found."
+            if results.count > 0{
+                return results[0]
+            }
+            
+        } catch  {
+            statusLabel.text = error.localizedDescription
+        }
+        
+        return nil
+    }
+    
     @IBAction func findClicked(_ sender: Any) {
+        if let contact = getObject(){
+            print("name: \(contact.name) address: \(contact.address) phone: \(contact.phone)")
+        }
     }
     
 
+    @IBAction func deleteClicked(_ sender: Any) {
+        if let contact = getObject(){
+            context.delete(contact)
+        }
+    }
 }
