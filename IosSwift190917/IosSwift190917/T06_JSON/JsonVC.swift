@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class JsonVC: UIViewController {
     
@@ -19,7 +20,22 @@ class JsonVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        jsonParsing()
+        jsonParsing2()
+    }
+    
+    func jsonParsing2(){
+        Alamofire.request("https://restcountries.eu/rest/v2/all").responseJSON { (response) in
+            
+            do{
+                let countries = try JSONDecoder().decode([Country].self, from: response.data!)
+                
+                for c in countries{
+                    print(c)
+                }
+            }catch{
+                print(error.localizedDescription)
+            }
+        }
     }
 
     func jsonParsing(){
