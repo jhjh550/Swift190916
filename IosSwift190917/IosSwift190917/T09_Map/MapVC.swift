@@ -10,12 +10,31 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapVC: UIViewController {
+class MapVC: UIViewController, CLLocationManagerDelegate {
 
+    var locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //        CLLocationManager.authorizationStatus() == .authorizedWhenInUse
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.allowsBackgroundLocationUpdates = true
 
-        geoCoding()
+        locationManager.delegate = self
+//        geoCoding()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse{
+            locationManager.requestLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        print(locations[0])
+        
     }
     
     func geoCoding(){
@@ -30,6 +49,10 @@ class MapVC: UIViewController {
                     
                     print("latitude \(coords.latitude) longitude \(coords.longitude)")
                     
+                    let mkPlaceMark = MKPlacemark(coordinate: coords)
+                    let mapItem = MKMapItem(placemark: mkPlaceMark)
+                    
+                    //mapItem.openInMaps(launchOptions: nil)
                 }
                 
             
