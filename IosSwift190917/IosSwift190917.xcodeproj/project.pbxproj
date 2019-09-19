@@ -38,6 +38,8 @@
 		4EF8311C2333244A00220EF5 /* CoreDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8311B2333244A00220EF5 /* CoreDataVC.swift */; };
 		4EF8311F2333452400220EF5 /* T09_Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF8311E2333452400220EF5 /* T09_Map.storyboard */; };
 		4EF831212333456B00220EF5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF831202333456B00220EF5 /* MapVC.swift */; };
+		4EF831242333604900220EF5 /* T10_AVPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF831232333604900220EF5 /* T10_AVPlayer.storyboard */; };
+		4EF83126233360A200220EF5 /* AvPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF83125233360A200220EF5 /* AvPlayerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		4EF8311B2333244A00220EF5 /* CoreDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataVC.swift; sourceTree = "<group>"; };
 		4EF8311E2333452400220EF5 /* T09_Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = T09_Map.storyboard; sourceTree = "<group>"; };
 		4EF831202333456B00220EF5 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		4EF831232333604900220EF5 /* T10_AVPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = T10_AVPlayer.storyboard; sourceTree = "<group>"; };
+		4EF83125233360A200220EF5 /* AvPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvPlayerVC.swift; sourceTree = "<group>"; };
 		6697C4116D4114818CDF7E10 /* Pods_IosSwift190917.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosSwift190917.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11B6E17FDBE1DB4F26716D9 /* Pods-IosSwift190917.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosSwift190917.debug.xcconfig"; path = "Target Support Files/Pods-IosSwift190917/Pods-IosSwift190917.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +153,7 @@
 		4E4D37C023309B1A00B767F6 /* IosSwift190917 */ = {
 			isa = PBXGroup;
 			children = (
+				4EF831222333602E00220EF5 /* T10_AVPlayer */,
 				4EF8311D2333451300220EF5 /* T09_Map */,
 				4EF831182333221100220EF5 /* T08_CoreData */,
 				4E0E98BE23330C270059838A /* T07_AutoLayout */,
@@ -224,6 +229,15 @@
 				4EF831202333456B00220EF5 /* MapVC.swift */,
 			);
 			path = T09_Map;
+			sourceTree = "<group>";
+		};
+		4EF831222333602E00220EF5 /* T10_AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				4EF831232333604900220EF5 /* T10_AVPlayer.storyboard */,
+				4EF83125233360A200220EF5 /* AvPlayerVC.swift */,
+			);
+			path = T10_AVPlayer;
 			sourceTree = "<group>";
 		};
 		D846E6245A5B5E0E73CA9493 /* Pods */ = {
@@ -310,6 +324,7 @@
 			files = (
 				4EF8311F2333452400220EF5 /* T09_Map.storyboard in Resources */,
 				4EF8311A2333222D00220EF5 /* T08_CoreData.storyboard in Resources */,
+				4EF831242333604900220EF5 /* T10_AVPlayer.storyboard in Resources */,
 				4E4D37CF23309B1C00B767F6 /* LaunchScreen.storyboard in Resources */,
 				4E0E98B02331FB910059838A /* Weather.storyboard in Resources */,
 				4E4D37E42330D34300B767F6 /* T03_ImagePickerViewController.storyboard in Resources */,
@@ -387,6 +402,7 @@
 				4E0E98B62332114C0059838A /* WeatherDetailVC.swift in Sources */,
 				4E0E98AD2331ECD00059838A /* XmlVC.swift in Sources */,
 				4E4D37C223309B1A00B767F6 /* AppDelegate.swift in Sources */,
+				4EF83126233360A200220EF5 /* AvPlayerVC.swift in Sources */,
 				4E4D37E62330D3C800B767F6 /* ImagePickVC.swift in Sources */,
 				4E4D37CA23309B1A00B767F6 /* IosSwift190917.xcdatamodeld in Sources */,
 				4E0E98BD23321A2B0059838A /* JsonVC.swift in Sources */,
